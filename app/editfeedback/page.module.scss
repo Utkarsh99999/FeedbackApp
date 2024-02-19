@@ -1,0 +1,253 @@
+.main {
+  background-color: aliceblue;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    padding: 2rem;
+    position: relative;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    flex-direction: column;
+    background: none;
+    gap: 40px;
+
+    .Nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .back {
+        color: rgba(55, 63, 104, 1);
+        font-weight: bold;
+        cursor: pointer;
+      }
+      Link {
+        text-decoration: none;
+      }
+    }
+
+    .flatBox {
+      width: 100%;
+      display: flex;
+      padding: 4rem 1.5rem;
+      position: relative;
+      gap: 20px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      color: rgba(55, 63, 104, 1);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px;
+
+      .image{
+        position: absolute;
+        top: -25px;
+        left: 50px;
+      }
+
+      .input{
+        font-size: small;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        input{
+          border: none;
+          background-color: rgba(247, 248, 253, 1);
+          padding: 1.2rem 1.2rem;
+          border-radius: 10px;
+        }
+      }
+
+      .select{
+        border: none;
+        z-index: 50;
+        background-color: rgba(247, 248, 253, 1);
+        padding: 1.2rem 1.2rem;
+        border-radius: 10px;
+      }
+      
+      .dropdown{
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+        top: -20px;
+        border-radius: 6px;
+        box-shadow: 1px 1px 10px rgb(194, 195, 195);
+        cursor: pointer;
+        background-color: #ffffff;
+        color: rgb(108, 106, 106);
+
+        .dropdownItem{
+          hr{
+            color: rgb(146, 142, 142);
+          }
+          padding: 0.6rem 1rem;
+          font-weight: 200;
+        }
+
+        .dropdownItem:hover{
+          color: #c02eff;
+        }
+      }
+      
+      .scaleIn {
+        width: 100%;
+        position: relative;
+        -webkit-animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+        animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+  
+      @-webkit-keyframes scale-in-tr {
+        0% {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes scale-in-tr {
+        0% {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+      }
+
+
+      .scaleOut {
+        -webkit-animation: scale-out-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)both;
+        animation: scale-out-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      }
+      @-webkit-keyframes scale-out-tr {
+        0% {
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes scale-out-tr {
+        0% {
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+          -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+          opacity: 1;
+        }
+      }
+
+      .select{
+        border: none;
+        background-color: rgba(247, 248, 253, 1);
+        padding: 1.2rem 1.2rem;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .button{
+        width: inherit;
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+
+        .btn1 {
+          color: white;
+          background-color: #a337f6;
+          padding: 15px 20px;
+          cursor: pointer;
+          border: none;
+          border-radius: 10px;
+        }
+
+        .btn2 {
+          color: white;
+          background-color: rgba(55, 63, 104, 1);
+          padding: 15px 20px;
+          cursor: pointer;
+          border: none;
+          border-radius: 10px;
+        }
+
+        .btn3 {
+          color: white;
+          background-color: rgb(235, 30, 40);
+          padding: 15px 20px;
+          cursor: pointer;
+          border: none;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main{
+    .container{
+      padding:1rem 1rem;
+      width: 90%;
+      .button{
+        flex-direction: column-reverse;
+        span{
+          flex-direction: column-reverse;
+        }
+        .btn1{
+          width: 100%;
+        }
+        .btn2{
+          width: 100%;
+        }
+        .btn3{
+          width: 100%;
+        }
+      }
+    }
+   }
+}

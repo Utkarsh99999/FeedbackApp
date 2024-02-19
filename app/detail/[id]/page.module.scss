@@ -1,0 +1,199 @@
+.main {
+  background-color: aliceblue;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    padding:2rem;
+    width: 60%;
+    justify-content: center;
+    flex-direction: column;
+    background: none;
+    gap: 10px;
+
+    .Nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .back {
+        color: rgba(55, 63, 104, 1);
+        font-weight: bold;
+        cursor: pointer;
+      }
+      Link {
+        text-decoration: none;
+      }
+      .btn {
+        color: white;
+        background-color: rgba(124, 145, 249, 1);
+        padding: 15px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+      }
+      .btn:hover{
+        background-color: rgba(70, 97, 230, 1);
+      }
+    }
+
+    .flatBox {
+      width: 100%;
+      display: flex;
+      padding: 1.5rem;
+      gap: 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: rgba(55, 63, 104, 1);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px;
+
+      .upvote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 8px;
+        color: rgba(55, 63, 104, 1);
+        background-color: rgba(242, 244, 255, 1);
+        border-radius: 10px;
+
+        :hover {
+          background-color: rgba(207, 215, 255, 1);
+        }
+      }
+
+      .contentContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: auto;
+        justify-content: space-between;
+      }
+
+      .content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+
+    .comments {
+      width: 100%;
+      display: flex;
+      padding: 1.5rem;
+      font-size:small;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      color: rgba(55, 63, 104, 1);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px;
+      
+      .upperBox{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .info{
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .reply{
+          cursor: pointer;
+          font-weight: bold;
+          color: rgba(70, 97, 230, 1);
+        }
+
+        .reply:hover{
+          color: rgb(172, 39, 255);
+        }
+
+      }
+
+      .lowerBox{
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        width: inherit;
+        
+        .commentReply{
+          background-color: aliceblue;
+          border: none;
+          border-radius: 8px;
+          padding: 0.6rem 0.5rem;
+          width: 75%;
+          color: rgb(0, 0, 0);
+        }
+        
+      }
+
+    }
+
+    .btn1 {
+      color: white;
+      background-color: #a337f6;
+      padding: 15px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+    }
+
+    input{
+      background-color: aliceblue;
+      border: none;
+      border-radius: 10px;
+      padding: 1.2rem 0.5rem;
+      width: 100%;
+      color: rgb(0, 0, 0);
+    }
+    input:focus{
+      border: 2px solid rgb(0, 89, 255);
+    }
+
+    .addComments {
+      width: 100%;
+      display: flex;
+      padding: 1.5rem;
+      gap: 10px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      color: rgba(55, 63, 104, 1);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px; 
+
+      .limitBtn{
+        font-size: small;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .main{
+    .container{
+      padding:1rem 1rem;
+      width: 100%;
+    }
+   }
+}

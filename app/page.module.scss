@@ -1,0 +1,747 @@
+.main {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  gap: 35px;
+  margin: auto;
+  padding: 2rem;
+  align-items: flex-start;
+  height: auto;
+
+  .Box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    gap: 10px;
+
+    .radialGrad {
+      background: radial-gradient(
+        128.88% 128.88% at 103.9% -10.39%,
+        #e84d70 0%,
+        #a337f6 53.09%,
+        #28a7ed 100%
+      );
+      width: 100%;
+      color: white;
+      display: flex;
+      z-index: 120;
+      height: auto;
+      font-size: medium;
+      font-weight: bold;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 1.2rem;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .filter {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      display: flex;
+      font-size: medium;
+      flex-wrap: wrap;
+      font-weight: bold;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 2rem;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .roadmap {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      color: rgba(55, 63, 104, 1);
+      font-size: medium;
+      font-weight: bold;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1.2rem;
+      border: none;
+      gap: 10px;
+      border-radius: 10px;
+
+      span {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: rgba(70, 97, 230, 1);
+          cursor: pointer;
+        }
+        a:hover {
+          color: #287aed;
+        }
+      }
+    }
+  }
+
+  .Box2 {
+    width: fit-content;
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    .topNav {
+      width: 100%;
+      color: white;
+      height: 80px;
+      z-index: 120;
+      display: flex;
+      align-items: center;
+      background-color: rgba(55, 63, 104, 1);
+      border: none;
+      border-radius: 10px;
+
+      .navOptions1 {
+        position: relative;
+        margin: 1rem;
+        display: flex;
+        width: 60%;
+        font-size: small;
+        font-weight: bold;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .scaleIn {
+          width: 100%;
+          position: relative;
+          -webkit-animation: scale-in-tr 0.5s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        @-webkit-keyframes scale-in-tr {
+          0% {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+        }
+
+        @keyframes scale-in-tr {
+          0% {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+        }
+
+        .scaleOut {
+          -webkit-animation: scale-out-tr 0.5s
+            cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: scale-out-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+        @-webkit-keyframes scale-out-tr {
+          0% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+        }
+        @keyframes scale-out-tr {
+          0% {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+            opacity: 1;
+          }
+        }
+
+        .dropdown {
+          position: absolute;
+          top: 40px;
+          width: 200px;
+          border-radius: 8px;
+          box-shadow: 1px 1px 10px rgb(194, 195, 195);
+          cursor: pointer;
+          background-color: #ffffff;
+          color: rgb(108, 106, 106);
+          z-index: 110;
+          .dropdownItem {
+            hr {
+              color: rgb(146, 142, 142);
+            }
+            padding: 0.6rem 1rem;
+            font-weight: 200;
+          }
+          .dropdownItem:hover {
+            color: #c02eff;
+          }
+        }
+      }
+
+      .navOptions2 {
+        font-size: small;
+        margin: 1rem;
+        font-weight: 400;
+        display: flex;
+        width: 40%;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    .flatBox {
+      width: 100%;
+      display: flex;
+      padding: 2rem;
+      z-index: 50;
+      gap: 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: rgba(55, 63, 104, 1);
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 10px;
+
+      .contentContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: auto;
+        justify-content: space-between;
+      }
+
+      .content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        a {
+          text-decoration: none;
+          color: rgba(55, 63, 104, 1);
+        }
+      }
+
+      .upvote {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: 8px;
+        color: rgba(55, 63, 104, 1);
+        background-color: rgba(242, 244, 255, 1);
+        border-radius: 10px;
+      }
+      .upvote:hover {
+        background-color: rgba(207, 215, 255, 1);
+      }
+    }
+
+    .flatBox:hover {
+      .contentContainer {
+        .content {
+          a {
+            color: #287aed;
+          }
+        }
+      }
+    }
+
+    .flatBoxEmpty {
+      width: 100%;
+      display: flex;
+      padding: 2rem;
+      gap: 30px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: rgba(55, 63, 104, 1);
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 20px;
+
+      .EmptyText {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+  }
+
+  .btn1 {
+    color: white;
+    background-color: #a337f6;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .advice {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(242, 244, 255, 1);
+    color: rgba(70, 97, 230, 1);
+  }
+
+  .advice:hover {
+    background-color: rgba(207, 215, 255, 1);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .comment {
+    display: none;
+  }
+  .commentsDesktop {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .commentsDesktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .drawerOpen {
+    z-index: 800;
+    position: fixed;
+    height: 100%;
+    background-color: aliceblue;
+    right: 0px;
+    padding: 1rem;
+    margin-top: 50px;
+    flex-direction: column;
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+
+    .roadmap {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      color: rgba(55, 63, 104, 1);
+      font-size: x-small;
+      font-weight: bold;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1rem;
+      border: none;
+      gap: 10px;
+      border-radius: 10px;
+
+      span {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .filter {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      display: flex;
+      font-size: x-small;
+      flex-wrap: wrap;
+      font-weight: bold;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 2rem;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+  .drawerOpen {
+    -webkit-animation: scale-in-tr 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-in-tr 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes scale-in-tr {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-tr {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+
+  .drawerClose {
+    z-index: 800;
+    position: fixed;
+    height: 100%;
+    background-color: aliceblue;
+    right: 0px;
+    padding: 1rem;
+    margin-top: 50px;
+    flex-direction: column;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .roadmap {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      color: rgba(55, 63, 104, 1);
+      font-size: small;
+      font-weight: bold;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 2rem;
+      border: none;
+      gap: 10px;
+      border-radius: 10px;
+
+      span {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .filter {
+      background-color: white;
+      width: 100%;
+      height: auto;
+      display: flex;
+      font-size: small;
+      flex-wrap: wrap;
+      font-weight: bold;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 2rem;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+  .drawerClose {
+    -webkit-animation: scale-out-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+    animation: scale-out-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  @-webkit-keyframes scale-out-tr {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-tr {
+    0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+
+  .advice {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(242, 244, 255, 1);
+    color: rgba(70, 97, 230, 1);
+  }
+  .advice:hover {
+    background-color: rgba(207, 215, 255, 1);
+  }
+
+  .main {
+    flex-direction: column;
+    margin-top: 140px;
+    position: relative;
+
+    .scaleIn {
+      -webkit-animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: scale-in-tr 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+    @-webkit-keyframes scale-in-tr {
+      0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        opacity: 1;
+      }
+    }
+    @keyframes scale-in-tr {
+      0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        opacity: 1;
+      }
+    }
+
+    .Box1 {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+      .radialGrad {
+        position: fixed;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 900;
+        top: 0px;
+        height: fit-content;
+        gap: 10px;
+        border-radius: 0px;
+        padding: 1.2rem;
+        
+        span{
+          img{
+            transition: all ease 0.3s;
+          } 
+        }
+      }
+      .roadmap {
+        display: none;
+      }
+      .filter {
+        display: none;
+      }
+    }
+
+    .Box2 {
+      width: 100%;
+      gap: 20px;
+      font-size: small;
+      .topNav {
+        position: fixed;
+        top: 82px;
+        border-radius: 0px;
+
+        .navOptions1 {
+          width: 40%;
+          img {
+            display: none;
+          }
+          .Sugest {
+            display: none;
+          }
+          select {
+            display: none;
+          }
+          .btn1{
+            height: 50px;
+            font-size: x-small;
+          }
+        }
+        .navOptions2 {
+          width: 60%;
+        }
+      }
+      .flatBox {
+        justify-content: center;
+        gap: 10px;
+
+        .upvoteContainer {
+          display: flex;
+          width: 20%;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+        .contentContainer {
+          display: flex;
+          width: 80%;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 620px) {
+
+  .main {
+    flex-direction: column;
+
+    .Box1 {
+      flex-direction: row;
+      width: 100%;
+      .radialGrad {
+        height: 180px;
+        font-size: small;
+        img {
+          display: none;
+        }
+      }
+      .filter {
+        height: 180px;
+        font-size: small;
+      }
+      .roadmap {
+        height: 180px;
+        font-size: small;
+      }
+    }
+
+    .Box2 {
+      width: 100%;
+      .flatBox {
+        div {
+          .comment {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .main {
+    flex-direction: row;
+
+    .Box1 {
+      flex-direction: column;
+      width: 20%;
+
+      .radialGrad {
+        height: auto;
+      }
+      .filter {
+        height: auto;
+      }
+      .roadmap {
+        height: auto;
+      }
+    }
+    .Box2 {
+      flex-direction: column;
+      width: 60%;
+    }
+  }
+}
